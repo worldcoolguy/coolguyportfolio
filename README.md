@@ -1,2 +1,5 @@
-# portfolio
-Building a proper portfolio site with Angular
+# Portfolio
+
+Work in progress.
+
+Built with Node, Express, AngularJS and SASS.
