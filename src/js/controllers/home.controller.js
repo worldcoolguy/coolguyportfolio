@@ -1,4 +1,5 @@
-angular.module('lbpf')
+angular
+  .module('lbpf')
   .controller('HomeCtrl', HomeCtrl);
 
 HomeCtrl.$inject = [];

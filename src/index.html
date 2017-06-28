@@ -2,14 +2,20 @@
 <html ng-app="lbpf">
   <head>
     <meta charset="utf-8">
+    <base href="/">
     <title>Angular Stack Setup</title>
     <!-- inject:js -->
     <!-- endinject -->
     <!-- inject:css -->
     <!-- endinject -->
   </head>
-  <body ng-controller="HomeCtrl as main">
-    <h1>html works</h1>
-    <h1>angular works {{1+1}}</h1>
+  <body ng-controller="MainCtrl as main">
+    <header>
+
+    </header>
+    <main ui-view></main>
+    <footer>
+
+    </footer>
   </body>
 </html>
