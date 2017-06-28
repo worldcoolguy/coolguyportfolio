@@ -26,7 +26,15 @@ header {
       display:inline;
     }
   }
-}
+} // end of header
+footer {
+  .row {
+    padding-top: 30px;
+  }
+  p {
+    color:white;
+  }
+} // end of footer
 .column, .columns {
   height:200px;
   background-color: teal;
