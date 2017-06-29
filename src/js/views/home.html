@@ -5,43 +5,62 @@
   </div>
   <div class="row">
     <div class="one-third column">
-      <h5>Project</h5>
+      <h5 ng-click="main.chooseProject({title: 'Project 1'})">Project 1</h5>
       <p>Details about project blah blah blah blah blah blah blah</p>
-      <a href="#">GitHub</a>
-      <a href="#">Heroku</a>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
     </div>
     <div class="one-third column">
-      <h5>Project</h5>
+      <h5 ng-click="main.chooseProject({title: 'Project 2'})">Project 2</h5>
       <p>Details about project blah blah blah blah blah blah blah</p>
-      <a href="#">GitHub</a>
-      <a href="#">Heroku</a>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
     </div>
     <div class="one-third column">
-      <h5>Project</h5>
+      <h5 ng-click="main.chooseProject({title: 'Project 3'})">Project 3</h5>
       <p>Details about project blah blah blah blah blah blah blah</p>
-      <a href="#">GitHub</a>
-      <a href="#">Heroku</a>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
     </div>
+  </div>
+
+  <div ng-if="main.currentProject.title" class="row project-display">
+    <hr>
+    <h4>{{main.currentProject.title}}</h4>
+    <h4 style="float:right;" ng-click="main.hideProject()">Hide</h4>
+    <hr>
   </div>
 
   <div class="row">
     <div class="one-third column">
-      <h5>Project</h5>
+      <h5 ng-click="main.chooseProject({title: 'Project 4'})">Project 4</h5>
       <p>Details about project blah blah blah blah blah blah blah</p>
-      <a href="#">GitHub</a>
-      <a href="#">Heroku</a>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
     </div>
     <div class="one-third column">
-      <h5>Project</h5>
+      <h5 ng-click="main.chooseProject({title: 'Project 5'})">Project 5</h5>
       <p>Details about project blah blah blah blah blah blah blah</p>
-      <a href="#">GitHub</a>
-      <a href="#">Heroku</a>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
     </div>
     <div class="one-third column">
-      <h5>Project</h5>
+      <h5 ng-click="main.chooseProject({title: 'Project 6'})">Project 6</h5>
       <p>Details about project blah blah blah blah blah blah blah</p>
-      <a href="#">GitHub</a>
-      <a href="#">Heroku</a>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
     </div>
   </div>
 
