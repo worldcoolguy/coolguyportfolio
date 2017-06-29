@@ -2,13 +2,17 @@
 @import 'skeleton';
 html {
   background-color: #383838;
+  p, h1, h2, h3, h4, h5 {
+    color: #383838;
+  }
 }
 header, footer {
   width: 100%;
-  height: 250px;
+  min-height: 250px;
 }
 main {
   background-color: white;
+  padding: 50px 0;
 }
 header {
   h1 {
