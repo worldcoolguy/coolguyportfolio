@@ -1,3 +1,113 @@
-<div class="row">
-  <h3>Welcome to portfolio</h3>
+<!-- Title section -->
+
+<div class="container title-section">
+  <div class="row">
+    <h3>Projects</h3>
+  </div>
+</div>
+
+<!-- end of title -->
+
+<!-- Projects section -->
+
+<div class="container">
+
+  <div class="row">
+    <div ng-hide="home.currentProject.title" class="one-third column">
+      <h5 ng-click="home.chooseProject({title: 'Project 1'})">Project 1</h5>
+      <p>Details about project blah blah blah blah blah blah blah</p>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
+    </div>
+    <div ng-hide="home.currentProject.title" class="one-third column">
+      <h5 ng-click="home.chooseProject({title: 'Project 2'})">Project 2</h5>
+      <p>Details about project blah blah blah blah blah blah blah</p>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
+    </div>
+    <div ng-hide="home.currentProject.title" class="one-third column">
+      <h5 ng-click="home.chooseProject({title: 'Project 3'})">Project 3</h5>
+      <p>Details about project blah blah blah blah blah blah blah</p>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div ng-hide="home.currentProject.title" class="one-third column">
+      <h5 ng-click="home.chooseProject({title: 'Project 4'})">Project 4</h5>
+      <p>Details about project blah blah blah blah blah blah blah</p>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
+    </div>
+    <div ng-hide="home.currentProject.title" class="one-third column">
+      <h5 ng-click="home.chooseProject({title: 'Project 5'})">Project 5</h5>
+      <p>Details about project blah blah blah blah blah blah blah</p>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
+    </div>
+    <div ng-hide="home.currentProject.title" class="one-third column">
+      <h5 ng-click="home.chooseProject({title: 'Project 6'})">Project 6</h5>
+      <p>Details about project blah blah blah blah blah blah blah</p>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
+    </div>
+  </div>
+
+  <div ng-show="home.currentProject.title" class="row project-display">
+    <hr>
+    <h4>{{home.currentProject.title}}</h4>
+    <h4 style="float:right;" ng-click="home.hideProject()">Hide</h4>
+    <hr>
+  </div>
+
+</div>
+
+<!-- end of projects -->
+
+<div class="container title-section">
+  <div class="row">
+    <h3>Contact</h3>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <form>
+      <div class="row">
+        <div class="six columns">
+          <label>Your email</label>
+          <input class="u-full-width" type="email" placeholder="test@mailbox.com">
+        </div>
+        <div class="six columns">
+          <label>Reason for contacting</label>
+          <select class="u-full-width">
+            <option value="Option 1">Questions</option>
+            <option value="Option 2">Admiration</option>
+            <option value="Option 3">Can I get your number?</option>
+          </select>
+        </div>
+      </div>
+      <label for="exampleMessage">Message</label>
+      <textarea class="u-full-width" placeholder="Hi Louis …" id="exampleMessage"></textarea>
+      <label>
+        <input type="checkbox">
+        <span class="label-body">Send a copy to yourself</span>
+      </label>
+      <input class="button" type="submit" value="Submit">
+    </form>
+
+  </div>
 </div>

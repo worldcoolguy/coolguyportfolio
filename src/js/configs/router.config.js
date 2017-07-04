@@ -20,11 +20,6 @@ function Router(
       url: '/',
       templateUrl: '/js/views/home.html',
       controller: 'HomeCtrl as home'
-    })
-    .state('projects', {
-      url: '/projects',
-      templateUrl: '/js/views/projects.html',
-      controller: 'ProjectsCtrl as projects'
     });
 
   $urlRouterProvider.otherwise('/');

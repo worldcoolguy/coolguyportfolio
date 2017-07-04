@@ -8,17 +8,48 @@ html {
 }
 header, footer {
   width: 100%;
-  min-height: 250px;
+  height: 250px;
 }
 main {
   background-color: white;
   padding: 50px 0;
+  .title-section {
+    padding: 30px;
+  }
+  .btn-container {
+    text-align: center;
+  }
+  .row {
+    h3, h5 {
+      text-align: center;
+    }
+  }
+  .project-display {
+    h4 {
+      display: inline;
+    }
+  }
+  .column, .columns {
+    // background-color: teal;
+    height:200px;
+  }
+  @media screen and (max-width: 939px) {
+    // doesn't affect footer because of specificity
+    .column, .columns {
+      height:300px;
+    }
+  }
+  form {
+    .column, .columns {
+      height:auto;
+    }
+  }
 }
 header {
   h1 {
     color:white;
     text-align:center;
-    padding-top:50px;
+    padding-top:70px;
     span {
       font-weight:bold;
     }
@@ -36,6 +67,9 @@ header {
   }
 } // end of header
 footer {
+  .column, .columns {
+    height:200px;
+  }
   .row {
     padding-top: 30px;
   }
@@ -43,24 +77,3 @@ footer {
     color:white;
   }
 } // end of footer
-.column, .columns {
-  height:200px;
-}
-@media screen and (max-width: 939px) {
-  .column, .columns {
-    height:300px;
-  }
-}
-.btn-container {
-  text-align: center;
-}
-.row {
-  h3, h5 {
-    text-align: center;
-  }
-}
-.project-display {
-  h4 {
-    display: inline;
-  }
-}
