@@ -34,12 +34,13 @@ main {
     height:200px;
   }
   @media screen and (max-width: 939px) {
-    // doesn't affect footer because of specificity
+    // doesn't affect footer or form because of specificity
     .column, .columns {
       height:300px;
     }
   }
   form {
+    // overrides media query
     .column, .columns {
       height:auto;
     }
