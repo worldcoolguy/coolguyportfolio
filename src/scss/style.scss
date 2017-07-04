@@ -45,7 +45,11 @@ footer {
 } // end of footer
 .column, .columns {
   height:200px;
-  // background-color: teal;
+}
+@media screen and (max-width: 939px) {
+  .column, .columns {
+    height:300px;
+  }
 }
 .btn-container {
   text-align: center;
