@@ -29,19 +29,19 @@ main {
       display: inline;
     }
   }
-  .column, .columns {
+  .myColumn {
     // background-color: teal;
     min-height:230px;
   }
   @media screen and (max-width: 939px) {
     // doesn't affect footer or form because of specificity
-    .column, .columns {
+    .myColumn {
       min-height:300px;
     }
   }
   form {
     // overrides media query
-    .column, .columns {
+    .myColumn {
       height:auto;
     }
   }
@@ -68,9 +68,6 @@ header {
   }
 } // end of header
 footer {
-  .column, .columns {
-    height:200px;
-  }
   .row {
     padding-top: 30px;
   }
@@ -78,3 +75,6 @@ footer {
     color:white;
   }
 } // end of footer
+.text-centered {
+  text-align: center;
+}

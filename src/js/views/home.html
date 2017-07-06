@@ -1,5 +1,5 @@
 
-<!-- Title section -->
+<!-- Projects section -->
 
 <div class="container title-section">
   <div class="row">
@@ -7,15 +7,11 @@
   </div>
 </div>
 
-<!-- end of title -->
-
-<!-- Projects section -->
-
 <div class="container">
   <div class="row">
 
     <div ng-hide="home.currentProject.title" class="row" ng-repeat="projects3 in home.projects.projects">
-      <div class="one-third column" ng-repeat="project in projects3">
+      <div class="one-third column myColumn text-centered" ng-repeat="project in projects3">
         <h5 ng-click="home.chooseProject(project)">{{project.title}}</h5>
         <div class="btn-container">
           <a class="button" ng-click="home.chooseProject(project)">View</a>
@@ -30,11 +26,11 @@
 
     <div ng-show="home.currentProject.title" class="row project-display">
 
-      <div class="eight columns">
+      <div class="eight columns myColumn">
         <br>
         <p ng-repeat="paragraph in home.currentProject.pageContent.paragraphs track by $index">{{paragraph}}<br></p>
       </div>
-      <div class="four columns">
+      <div class="four columns myColumn">
         <div class="btn-container">
           <a class="button" ng-click="home.hideProject()">Close</a><br><br>
           <a class="button" href="#">GitHub</a><br>
@@ -48,6 +44,8 @@
 </div>
 
 <!-- end of projects -->
+
+<!-- Contact section -->
 
 <div class="container title-section">
   <div class="row">
@@ -83,3 +81,5 @@
 
   </div>
 </div>
+
+<!-- end of contact section -->
