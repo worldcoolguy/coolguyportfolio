@@ -1,0 +1,65 @@
+<div class="container">
+
+  <div class="row">
+    <div ng-hide="projects.currentProject.title" class="one-third column">
+      <h5 ng-click="projects.chooseProject({title: 'Project 1'})">Project 1</h5>
+      <p>Details about project blah blah blah blah blah blah blah</p>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
+    </div>
+    <div ng-hide="projects.currentProject.title" class="one-third column">
+      <h5 ng-click="projects.chooseProject({title: 'Project 2'})">Project 2</h5>
+      <p>Details about project blah blah blah blah blah blah blah</p>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
+    </div>
+    <div ng-hide="projects.currentProject.title" class="one-third column">
+      <h5 ng-click="projects.chooseProject({title: 'Project 3'})">Project 3</h5>
+      <p>Details about project blah blah blah blah blah blah blah</p>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div ng-hide="projects.currentProject.title" class="one-third column">
+      <h5 ng-click="projects.chooseProject({title: 'Project 4'})">Project 4</h5>
+      <p>Details about project blah blah blah blah blah blah blah</p>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
+    </div>
+    <div ng-hide="projects.currentProject.title" class="one-third column">
+      <h5 ng-click="projects.chooseProject({title: 'Project 5'})">Project 5</h5>
+      <p>Details about project blah blah blah blah blah blah blah</p>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
+    </div>
+    <div ng-hide="projects.currentProject.title" class="one-third column">
+      <h5 ng-click="projects.chooseProject({title: 'Project 6'})">Project 6</h5>
+      <p>Details about project blah blah blah blah blah blah blah</p>
+      <div class="btn-container">
+        <a class="button" href="#">GitHub</a>
+        <a class="button" href="#">Heroku</a>
+      </div>
+    </div>
+  </div>
+
+  <div ng-show="projects.currentProject.title" class="row project-display">
+    <hr>
+    <h4>{{projects.currentProject.title}}</h4>
+    <h4 style="float:right;" ng-click="projects.hideProject()">Hide</h4>
+    <hr>
+  </div>
+
+
+</div>

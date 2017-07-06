@@ -2,12 +2,14 @@ angular
   .module('lbpf')
   .controller('HomeCtrl', HomeCtrl);
 
-HomeCtrl.$inject = [];
-function HomeCtrl() {
+HomeCtrl.$inject = ['ProjectsConst'];
+function HomeCtrl(ProjectsConst) {
   const vm = this;
 
+  vm.projects = ProjectsConst;
+
   vm.chooseProject = project => {
-    console.log('hit');
+    console.log(project);
     vm.currentProject = project;
   };
   vm.hideProject = () => {

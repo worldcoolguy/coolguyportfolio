@@ -31,12 +31,12 @@ main {
   }
   .column, .columns {
     // background-color: teal;
-    height:200px;
+    min-height:230px;
   }
   @media screen and (max-width: 939px) {
     // doesn't affect footer or form because of specificity
     .column, .columns {
-      height:300px;
+      min-height:300px;
     }
   }
   form {

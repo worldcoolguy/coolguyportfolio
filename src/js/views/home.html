@@ -1,3 +1,4 @@
+
 <!-- Title section -->
 
 <div class="container title-section">
@@ -11,68 +12,39 @@
 <!-- Projects section -->
 
 <div class="container">
-
   <div class="row">
-    <div ng-hide="home.currentProject.title" class="one-third column">
-      <h5 ng-click="home.chooseProject({title: 'Project 1'})">Project 1</h5>
-      <p>Details about project blah blah blah blah blah blah blah</p>
-      <div class="btn-container">
-        <a class="button" href="#">GitHub</a>
-        <a class="button" href="#">Heroku</a>
-      </div>
-    </div>
-    <div ng-hide="home.currentProject.title" class="one-third column">
-      <h5 ng-click="home.chooseProject({title: 'Project 2'})">Project 2</h5>
-      <p>Details about project blah blah blah blah blah blah blah</p>
-      <div class="btn-container">
-        <a class="button" href="#">GitHub</a>
-        <a class="button" href="#">Heroku</a>
-      </div>
-    </div>
-    <div ng-hide="home.currentProject.title" class="one-third column">
-      <h5 ng-click="home.chooseProject({title: 'Project 3'})">Project 3</h5>
-      <p>Details about project blah blah blah blah blah blah blah</p>
-      <div class="btn-container">
-        <a class="button" href="#">GitHub</a>
-        <a class="button" href="#">Heroku</a>
-      </div>
-    </div>
-  </div>
 
-  <div class="row">
-    <div ng-hide="home.currentProject.title" class="one-third column">
-      <h5 ng-click="home.chooseProject({title: 'Project 4'})">Project 4</h5>
-      <p>Details about project blah blah blah blah blah blah blah</p>
-      <div class="btn-container">
-        <a class="button" href="#">GitHub</a>
-        <a class="button" href="#">Heroku</a>
+    <div ng-hide="home.currentProject.title" class="row" ng-repeat="projects3 in home.projects.projects">
+      <div class="one-third column" ng-repeat="project in projects3">
+        <h5 ng-click="home.chooseProject(project)">{{project.title}}</h5>
+        <div class="btn-container">
+          <a class="button" ng-click="home.chooseProject(project)">View</a>
+        </div>
+        <p>{{project.summary}}</p>
       </div>
     </div>
-    <div ng-hide="home.currentProject.title" class="one-third column">
-      <h5 ng-click="home.chooseProject({title: 'Project 5'})">Project 5</h5>
-      <p>Details about project blah blah blah blah blah blah blah</p>
-      <div class="btn-container">
-        <a class="button" href="#">GitHub</a>
-        <a class="button" href="#">Heroku</a>
-      </div>
-    </div>
-    <div ng-hide="home.currentProject.title" class="one-third column">
-      <h5 ng-click="home.chooseProject({title: 'Project 6'})">Project 6</h5>
-      <p>Details about project blah blah blah blah blah blah blah</p>
-      <div class="btn-container">
-        <a class="button" href="#">GitHub</a>
-        <a class="button" href="#">Heroku</a>
-      </div>
-    </div>
-  </div>
 
-  <div ng-show="home.currentProject.title" class="row project-display">
-    <hr>
-    <h4>{{home.currentProject.title}}</h4>
-    <h4 style="float:right;" ng-click="home.hideProject()">Hide</h4>
-    <hr>
-  </div>
+    <div class="row">
+      <h4>{{home.currentProject.title}}</h4>
+    </div>
 
+    <div ng-show="home.currentProject.title" class="row project-display">
+
+      <div class="eight columns">
+        <br>
+        <p ng-repeat="paragraph in home.currentProject.pageContent.paragraphs track by $index">{{paragraph}}<br></p>
+      </div>
+      <div class="four columns">
+        <div class="btn-container">
+          <a class="button" ng-click="home.hideProject()">Close</a><br><br>
+          <a class="button" href="#">GitHub</a><br>
+          <a class="button" href="#">Heroku</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </div>
 
 <!-- end of projects -->
