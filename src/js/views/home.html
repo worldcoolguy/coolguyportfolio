@@ -3,7 +3,7 @@
 
 <div class="container title-section">
   <div class="row">
-    <h3>Projects</h3>
+    <h3 ng-hide="home.currentProject.title">Projects</h3>
   </div>
 </div>
 
@@ -28,13 +28,22 @@
 
       <div class="eight columns myColumn">
         <br>
+        <p style="font-weight:bold;">Techs used</p>
+        <ul>
+          <li ng-repeat="tech in home.currentProject.pageContent.techs">{{tech}}</li>
+        </ul>
         <p ng-repeat="paragraph in home.currentProject.pageContent.paragraphs track by $index">{{paragraph}}<br></p>
       </div>
       <div class="four columns myColumn">
         <div class="btn-container">
           <a class="button" ng-click="home.hideProject()">Close</a><br><br>
-          <a class="button" href="#">GitHub</a><br>
-          <a class="button" href="#">Heroku</a>
+          <a ng-repeat="link in home.currentProject.pageContent.links" class="button" href="{{link.url}}">{{link.text}}</a><br>
+          <div ng-show="home.currentProject.pageContent.colabs.length > 0">
+            <br><p style="font-weight:bold;">Colaborators</p>
+            <ul>
+              <li ng-repeat="colab in home.currentProject.pageContent.colabs"><a href="{{colab.url}}">{{colab.name}}</a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -47,13 +56,13 @@
 
 <!-- Contact section -->
 
-<div class="container title-section">
+<div class="container title-section" ng-hide="home.currentProject.title">
   <div class="row">
     <h3>Contact</h3>
   </div>
 </div>
 
-<div class="container">
+<div class="container" ng-hide="home.currentProject.title">
   <div class="row">
     <form>
       <div class="row">
