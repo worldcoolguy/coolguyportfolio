@@ -20,39 +20,44 @@
       </div>
     </div>
 
-    <div class="row">
-      <h4>{{home.currentProject.title}}</h4>
-    </div>
-
-    <div ng-show="home.currentProject.title" class="row project-display">
-
-      <div class="eight columns myColumn">
-        <br>
-        <p style="font-weight:bold;">Techs used</p>
-        <ul>
-          <li ng-repeat="tech in home.currentProject.pageContent.techs">{{tech}}</li>
-        </ul>
-        <p ng-repeat="paragraph in home.currentProject.pageContent.paragraphs track by $index">{{paragraph}}<br></p>
-      </div>
-      <div class="four columns myColumn">
-        <div class="btn-container">
-          <a class="button" ng-click="home.hideProject()">Close</a><br><br>
-          <a ng-repeat="link in home.currentProject.pageContent.links" class="button" href="{{link.url}}">{{link.text}}</a><br>
-          <div ng-show="home.currentProject.pageContent.colabs.length > 0">
-            <br><p style="font-weight:bold;">Colaborators</p>
-            <ul>
-              <li ng-repeat="colab in home.currentProject.pageContent.colabs"><a href="{{colab.url}}">{{colab.name}}</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
   </div>
 </div>
 
 <!-- end of projects -->
+
+<!-- currentProject section -->
+
+<div class="container" ng-show="home.currentProject.title" class="row project-display">
+  <div class="row">
+    <h4>{{home.currentProject.title}}</h4>
+  </div>
+
+  <div class="row">
+    <div class="eight columns myColumn">
+      <br>
+      <p style="font-weight:bold;">Techs used</p>
+      <ul>
+        <li ng-repeat="tech in home.currentProject.pageContent.techs">{{tech}}</li>
+      </ul>
+      <p ng-repeat="paragraph in home.currentProject.pageContent.paragraphs track by $index">{{paragraph}}<br></p>
+    </div>
+    <div class="four columns myColumn">
+      <div class="btn-container">
+        <a class="button" ng-click="home.hideProject()">Close</a><br><br>
+        <span ng-repeat="link in home.currentProject.pageContent.links"><a class="button" href="{{link.url}}">{{link.text}}</a><br></span>
+      </div>
+      <div ng-show="home.currentProject.pageContent.colabs.length">
+        <br><p style="font-weight:bold;">Colaborators</p>
+        <ul>
+          <li ng-repeat="colab in home.currentProject.pageContent.colabs"><a href="{{colab.url}}">{{colab.name}}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- end of currentProject section -->
 
 <!-- Contact section -->
 
@@ -79,8 +84,8 @@
           </select>
         </div>
       </div>
-      <label for="exampleMessage">Message</label>
-      <textarea class="u-full-width" placeholder="Hi Louis …" id="exampleMessage"></textarea>
+      <label>Message</label>
+      <textarea class="u-full-width" placeholder="Hi…"></textarea>
       <label>
         <input type="checkbox">
         <span class="label-body">Send a copy to yourself</span>
