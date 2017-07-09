@@ -91,7 +91,7 @@ Once logged in users are redirected to their account page where they can post re
       paragraphs: [
 'Othello is a highly strategic game where you take enemy pieces by flanking them with your own. Originally given the name Reversi when it was invented, it was rebranded as Othello by Mattel.',
 
-'I modified the function that checks wether a move is valid, then repeated it for every square on the board to find the moves that will score highest. At the moment, it doesn\'t think at all, it just finds the best move and takes it, an aggressive strategy. It only looks at the board at that time.',
+'It was challenging to make a computer that would play back. I modified the function that checks wether a move is valid, then repeated it for every square on the board to find the moves that will score highest. At the moment, it doesn\'t think at all, it just finds the best move and takes it, an aggressive strategy. It only looks at the board at that time.',
 
 'An experienced player could beat or trap it.',
 
