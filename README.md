@@ -2,4 +2,4 @@
 
 Work in progress.
 
-Built with Node, Express, AngularJS, SASS and skeleton.css.
+Built with Node, Express, AngularJS, SASS, skeleton.css and fontawesome.

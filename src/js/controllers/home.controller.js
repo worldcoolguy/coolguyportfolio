@@ -9,7 +9,6 @@ function HomeCtrl(ProjectsConst) {
   vm.projects = ProjectsConst;
 
   vm.chooseProject = project => {
-    console.log(project);
     vm.currentProject = project;
   };
   vm.hideProject = () => {
