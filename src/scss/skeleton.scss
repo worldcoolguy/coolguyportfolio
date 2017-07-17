@@ -8,6 +8,9 @@
 * 12/29/2014
 */
 
+/*
+I have changed a couple of things in the Grid section
+*/
 
 /* Table of contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -32,7 +35,8 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  // max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
@@ -43,14 +47,16 @@
   box-sizing: border-box; }
 
 /* For devices larger than 400px */
-@media (min-width: 400px) {
+// @media (min-width: 400px) {
+@media (min-width: 500px) {
   .container {
     width: 85%;
     padding: 0; }
 }
 
 /* For devices larger than 550px */
-@media (min-width: 550px) {
+// @media (min-width: 550px) {
+@media (min-width: 650px) {
   .container {
     width: 80%; }
   .column,
